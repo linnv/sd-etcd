@@ -1,0 +1,6 @@
+## simple service discovery power by ETCD
+
+### logic of service discovery:
+	client puts a key with prefix,  the value has a specified format;
+	server watch keys that with the prefix, and takes the node information from value; 
+	server makes HTTP GET to each node to the status at regular intervals;
